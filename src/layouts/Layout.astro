@@ -1,6 +1,6 @@
 ---
-import MetaLayout from './MetaLayout.astro';
-import Header from '../components/Header.astro';
+import MetaLayout from "./MetaLayout.astro";
+import Header from "../components/Header.astro";
 
 interface Props {
 	title: string;
@@ -10,6 +10,7 @@ const { title } = Astro.props;
 ---
 
 <MetaLayout title={title}>
+	<div class="background"></div>
 	<Header />
 	<slot />
 </MetaLayout>
@@ -26,5 +27,19 @@ const { title } = Astro.props;
 	a {
 		text-decoration: none;
 		color: white;
+	}
+
+	.background {
+		position: fixed;
+		top: 0;
+		z-index: -2;
+		height: 100vh;
+		width: 100vw;
+		background-color: #111827; /* Puedes ajustar este color según tus necesidades */
+		background-image: radial-gradient(
+			ellipse 80% 80% at 50% -20%,
+			rgba(120, 119, 198, 0.3),
+			rgba(255, 255, 255, 0)
+		);
 	}
 </style>
