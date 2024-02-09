@@ -1,0 +1,14 @@
+---
+import MetaLayout from "./MetaLayout.astro";
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<MetaLayout title={title}>
+	<!-- TODO: Add header -->
+	<slot />
+</MetaLayout>

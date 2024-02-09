@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="bygerman - Fullstack Developer">
+	<main>
+		<h1>Elevating <span>ideas</span> into <code>code</code></h1>
+
+		<Card
+			href="https://docs.astro.build/"
+			title="Documentation"
+			body="Learn how Astro works and explore the official API docs."
+		/>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		color: white;
+		line-height: 1.6;
+	}
+</style>
