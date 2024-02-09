@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 ---
 
-<Layout title="bygerman - Fullstack Developer">
+<Layout title="bygerman - Home">
 	<main>
 		<h1>Elevating <span>ideas</span> into <code>code</code></h1>
 
@@ -15,12 +15,17 @@ import Card from "../components/Card.astro";
 	</main>
 </Layout>
 
-<style>
+<style is:global>
 	main {
 		margin: auto;
 		padding: 1rem;
 		width: 800px;
 		color: white;
 		line-height: 1.6;
+	}
+
+	a {
+		text-decoration: none;
+		color: white;
 	}
 </style>
