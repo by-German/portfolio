@@ -1,0 +1,36 @@
+<header>
+  <nav>
+    <a href="">Home</a>
+    <a href="">About</a>
+    <a href="">Projects</a>
+    <a href="">Contact</a>
+  </nav>
+</header>
+
+<style>
+  nav {
+    background-color: #252525;
+    padding: 16px 0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 550px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* flex-direction: column;
+    align-items: center; */
+  }
+
+  a {
+    font-weight: 500;
+  }
+
+  a:is(:hover, :active) {
+    color: #f2f2f2;
+  }
+</style>
