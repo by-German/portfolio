@@ -1,11 +1,12 @@
----
-interface Props {
-	title: string;
-	body: string;
-	href: string;
-}
+<section>
+	<slot></slot>
+</section>
 
-const { href, title, body } = Astro.props;
----
-
-<h1>Card</h1>
+<style>
+	section {
+		border: 1px solid #505050;
+		padding: 16px 32px;
+		border-radius: 8px;
+		background-color: rgba(22, 22, 22, 0.4);
+	}
+</style>
