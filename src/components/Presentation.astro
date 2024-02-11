@@ -2,6 +2,9 @@
 import SocialPill from "./SocialPill.astro";
 import LinkedInIcon from "../icons/LinkedInIcon.astro";
 import GitHubIcon from "../icons/GitHubIcon.astro";
+import MailIcon from "../icons/MailIcon.astro";
+import { Target } from "../models/enums.ts";
+
 ---
 
 <h1>Hi, I'm Brayan Germán</h1>
@@ -24,14 +27,19 @@ import GitHubIcon from "../icons/GitHubIcon.astro";
     <GitHubIcon slot="icon" width="20" height="20" color="white" />
     <p slot="text">GitHub</p>
   </SocialPill>
+
+  <SocialPill href="mailto:by.german@outlook.com" target={Target.Self}>
+    <MailIcon slot="icon" width="22" height="22" color="white"/>
+    <p slot="text">by.german@outlook.com</p>
+  </SocialPill>
 </div>
 
 <style>
-	h1 {
+  h1 {
     font-size: 26px;
-		margin: 8px 0px;
-		color: #fcb29e;
-	}
+    margin: 8px 0px;
+    color: #fcb29e;
+  }
 
   .social {
     display: flex;
