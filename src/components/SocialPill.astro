@@ -1,16 +1,18 @@
 ---
+import { Target } from "../models/enums.ts";
+
 interface Props {
   href: string;
+  target?: Target;
 }
 
-const { href } = Astro.props;
-
+const { href, target = Target.Blank } = Astro.props;
 ---
 
-<a href={href} target="_blank"> 
-  <slot name="icon"></slot>
-  <slot name="text"></slot>
-  <slot name="icon-after"></slot>
+<a href={href} target={target}>
+  <slot name="icon" />
+  <slot name="text" />
+  <slot name="icon-after" />
 </a>
 
 <style>
@@ -28,5 +30,4 @@ const { href } = Astro.props;
   a:hover {
     color: white;
   }
-
 </style>
