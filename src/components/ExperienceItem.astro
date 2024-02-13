@@ -1,0 +1,34 @@
+---
+interface Props {
+  company: string;
+  image?: string;
+  dateRange: string;
+  description?: string;
+  tasks: string[];
+}
+
+const { company, image, dateRange, description, tasks } = Astro.props;
+---
+
+<article>
+  <div class="time-line"></div>
+  <figure>
+    <img
+      src={image ?? "https://via.placeholder.com/100x100"}
+      alt={`logo of ${company}`}
+    />
+  </figure>
+  <section>
+    <h2>{company} - {dateRange}</h2>
+    <header>
+      <h1></h1>
+      {company}
+      <p>{company}</p>
+      <p>{dateRange}</p>
+    </header>
+    <p>{description}</p>
+    <ul>
+      {tasks.map((task) => <li>{task}</li>)}
+    </ul>
+  </section>
+</article>
