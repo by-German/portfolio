@@ -1,34 +1,80 @@
 ---
 interface Props {
   company: string;
-  image?: string;
   dateRange: string;
   description?: string;
   tasks: string[];
 }
 
-const { company, image, dateRange, description, tasks } = Astro.props;
+const { company, dateRange, description, tasks } = Astro.props;
 ---
 
 <article>
   <div class="time-line"></div>
-  <figure>
-    <img
-      src={image ?? "https://via.placeholder.com/100x100"}
-      alt={`logo of ${company}`}
-    />
-  </figure>
+
   <section>
-    <h2>{company} - {dateRange}</h2>
     <header>
-      <h1></h1>
-      {company}
-      <p>{company}</p>
-      <p>{dateRange}</p>
+      <h3>{dateRange} - {company}</h3>
+      <h2>{description}</h2>
     </header>
-    <p>{description}</p>
     <ul>
       {tasks.map((task) => <li>{task}</li>)}
     </ul>
   </section>
 </article>
+
+<style>
+  article {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
+  article > section {
+    flex: 1;
+  }
+
+  .time-line {
+    content: "";
+    width: 3px;
+    background-color: rgb(75, 75, 75);
+    margin-left: 16px;
+    position: relative;
+  }
+  .time-line::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 3px solid rgb(75, 75, 75);
+    background-color: rgb(151, 151, 151);
+    top: calc(24px / 2 - 1px);
+    left: calc(-24px / 2 - 2px);
+  }
+  section > header {
+    display: flex;
+    flex-direction: column;
+  }
+  section > header > h2, h3, ul {
+    margin: 0px;
+  }
+  section > header > h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #8cfddb;
+  }
+  section > header > h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ababab;
+    line-height: 1;
+  }
+  section > ul {
+    padding-left: 32px;
+    margin-top: 8px;
+    margin-bottom: 32px;
+  }
+  ul > li {
+    text-wrap: pretty;
+  }
+</style>
