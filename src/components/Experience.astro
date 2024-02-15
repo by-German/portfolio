@@ -1,0 +1,42 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const experience = [
+  {
+    company: "Autónomo",
+    dateRange: "Actualidad",
+    description: "Full Stack Developer",
+    tasks: [
+      "Creación de aplicaciones web",
+      "Mantenimientos de aplicaciones API REST",
+      "Gestión de repositorios personales en GitHub",
+      "Creación de aplicaciones móviles y de escritorio con Flutter y Python",
+      "Publicación de contenedores Docker",
+    ],
+  },
+  {
+    company: "NAS Consulting",
+    dateRange: "2022 - 2023",
+    description: "Analista Programador",
+    tasks: [
+      "Líder de equipo de desarrollo",
+      "Implementación de nuevas funcionalidades de la aplicación web (Backend y Frontend) con Spring Boot y Angular",
+      "Implementación de la arquitectura MVP en la aplicación móvil de Android con Java",
+      "Desarrollo de la aplicación móvil empresarial mediante Flutter, integrándola con el API REST del CRM orgnizacional",
+    ],
+  },
+];
+---
+
+<section>
+  {
+    experience.map((item) => (
+      <ExperienceItem
+        company={item.company}
+        dateRange={item.dateRange}
+        description={item.description}
+        tasks={item.tasks}
+      />
+    ))
+  }
+</section>
