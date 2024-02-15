@@ -1,0 +1,53 @@
+---
+import Chip from "./ui/Chip.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+}
+
+const { title, description, image, tags } = Astro.props;
+---
+
+<article>
+  <img src={image} alt={`Screenshot of the ${title} project`} />
+  <section>
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <footer>
+      {tags.map((tag) => <Chip text={tag} />)}
+    </footer>
+  </section>
+</article>
+
+<style>
+  article {
+		flex: 1;
+		display: flex;
+		gap: 16px;
+		border: 1px solid #505050;
+		background-color: rgba(22, 22, 22, 0.4);
+
+		border-radius: 8px;
+	}
+
+	article > img {
+		border-radius: 8px 0 0 8px;
+	}
+
+	article > section {
+		display: flex;
+		flex-direction: column;
+	}
+	article > section > p {
+		flex: 1;
+	}
+	article footer {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin-bottom: 16px;
+	}
+</style>
