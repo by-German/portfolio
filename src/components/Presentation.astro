@@ -4,35 +4,39 @@ import LinkedInIcon from "../icons/LinkedInIcon.astro";
 import GitHubIcon from "../icons/GitHubIcon.astro";
 import MailIcon from "../icons/MailIcon.astro";
 import { Target } from "../models/enums.ts";
-
+import Card from "./ui/Card.astro";
 ---
 
-<h1>Hi, I'm Brayan Germán</h1>
+<Card>
+  <h1>Hi, I'm Brayan Germán</h1>
 
-<p>
-  Apasionado por el desarrollo de software, he demostrado facilidad en dominar
-  fácilmente nuevos conocimientos y tecnologías, así como por mi motivación para
-  aplicarlas en proyectos 🚀
-</p>
+  <p>
+    Apasionado por el desarrollo de software, he demostrado facilidad en dominar
+    fácilmente nuevos conocimientos y tecnologías, así como por mi motivación
+    para aplicarlas en proyectos 🚀
+  </p>
 
-<div class="social">
-  <SocialPill
-    href="https://www.linkedin.com/in/brayan-germ%C3%A1n-mamani-rojas-131467251/"
-  >
-    <LinkedInIcon slot="icon" width="20" height="20" color="white" />
-    <p slot="text">LinkedIn</p>
-  </SocialPill>
+  <div class="social">
+    <SocialPill
+      href="https://www.linkedin.com/in/brayan-germ%C3%A1n-mamani-rojas-131467251/"
+    >
+      <LinkedInIcon slot="icon" width="20" height="20" color="white" />
+      <p slot="text">LinkedIn</p>
+    </SocialPill>
 
-  <SocialPill href="https://github.com/by-German">
-    <GitHubIcon slot="icon" width="20" height="20" color="white" />
-    <p slot="text">GitHub</p>
-  </SocialPill>
+    <SocialPill href="https://github.com/by-German">
+      <GitHubIcon slot="icon" width="20" height="20" color="white" />
+      <p slot="text">GitHub</p>
+    </SocialPill>
 
-  <SocialPill href="mailto:by.german@outlook.com" target={Target.Self}>
-    <MailIcon slot="icon" width="22" height="22" color="white"/>
-    <p slot="text">by.german@outlook.com</p>
-  </SocialPill>
-</div>
+    <SocialPill href="mailto:by.german@outlook.com" target={Target.Self}>
+      <MailIcon slot="icon" width="22" height="22" color="white" />
+      <p slot="text">by.german@outlook.com</p>
+    </SocialPill>
+  </div>
+</Card>
+
+
 
 <style>
   h1 {
