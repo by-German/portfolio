@@ -29,12 +29,12 @@ const { title, description, image, tags } = Astro.props;
 		gap: 16px;
 		border: 1px solid #505050;
 		background-color: rgba(22, 22, 22, 0.4);
-
 		border-radius: 8px;
 	}
 
 	article > img {
-		border-radius: 8px 0 0 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 	}
 
 	article > section {
