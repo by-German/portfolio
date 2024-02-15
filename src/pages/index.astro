@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Presentation from "../components/Presentation.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="bygerman - developer">
@@ -17,9 +18,15 @@ import Projects from "../components/Projects.astro";
 
 		<Projects />
 	</main>
+	
+	<Footer/>
 </Layout>
 
 <style>
+	main {
+		margin-bottom: 42px;
+	}
+
 	.header {
 		font-size: 3rem;
 		text-align: center;
@@ -34,5 +41,7 @@ import Projects from "../components/Projects.astro";
 	code {
 		color: #6bffd3; /* #FF8B6B, #6B8BFF */
 	}
+
+	
 
 </style>
