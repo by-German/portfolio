@@ -1,4 +1,39 @@
-<h2 class="sub-header">Projects</h2>
+---
+import Chip from "./ui/Chip.astro";
+import ProjectItem from "./ProjectItem.astro";
+
+const projects = [
+	{
+		title: "Detection Vehicule IA",
+		description:
+			"The application is built using React and Azure's Custom Vision API.",
+		image: "https://via.placeholder.com/200",
+		tags: ["React", "Custom Vision API"],
+	},
+	{
+		title: "Events App",
+		description: "Application to create and subscribe to events.",
+		image: "https://via.placeholder.com/200",
+		tags: ["Angular", "Firebase", "Spring Boot"],
+	},
+];
+---
+
+<section>
+	<h2 class="sub-header">Projects</h2>
+	<div class="project-list">
+		{
+			projects.map((project) => (
+				<ProjectItem
+					title={project.title}
+					description={project.description}
+					image={project.image}
+					tags={project.tags}
+				/>
+			))
+		}
+	</div>
+</section>
 
 <style>
 	.sub-header {
@@ -6,5 +41,10 @@
 		margin-top: 4rem;
 		margin-bottom: 2rem;
 		color: #ff6b6b;
+	}
+	.project-list {
+		display: flex;
+		gap: 16px;
+		flex-direction: column;
 	}
 </style>
