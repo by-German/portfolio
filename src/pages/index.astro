@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/ui/Card.astro";
 import Presentation from "../components/Presentation.astro";
 import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout title="bygerman - developer">
@@ -15,10 +16,9 @@ import Experience from "../components/Experience.astro";
 			<Presentation />
 		</Card>
 
-		<h2 class="sub-header">Experience</h2>
 		<Experience />
 
-		<h2 class="sub-header">Projects</h2>
+		<Projects />
 
 	</main>
 </Layout>
@@ -44,12 +44,4 @@ import Experience from "../components/Experience.astro";
 		flex-direction: row;
 		gap: 32px;
 	}
-
-	.sub-header {
-		font-size: 2rem;
-		margin-top: 4rem;
-		margin-bottom: 2rem;
-		color: #ff6b6b;
-	}
-
 </style>
