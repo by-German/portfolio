@@ -5,7 +5,7 @@ interface Props {
   color: string;
 }
 
-const { width, height, color } = Astro.props;
+const { width, height, color = 'white' } = Astro.props;
 ---
 
 <svg
