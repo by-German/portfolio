@@ -1,0 +1,29 @@
+---
+interface Props {
+  width?: number;
+  height?: number;
+  color?: string;
+}
+
+const { width = 64, height = 64, color } = Astro.props;
+---
+
+<svg
+  viewBox="30 30 65 65"
+  width={width}
+  height={height}
+  preserveAspectRatio="xMidYMid"
+  ><path
+    d="M63.77 32c-16.248 0-15.234 7.046-15.234 7.046l.02 7.3h15.504v2.19H42.394S32 47.356 32 63.752c0 16.396 9.074 15.812 9.074 15.812h5.416v-7.608s-.292-9.074 8.93-9.074h15.376s8.64.14 8.64-8.35v-14.038S80.748 32 63.77 32zm-8.55 3.636c1.542 0 2.79 1.248 2.79 2.79s-1.248 2.79-2.79 2.79a2.785 2.785 0 0 1-2.79-2.79c0-1.542 1.248-2.79 2.79-2.79z"
+    fill="url(#python_a)"></path><path
+    d="M64.23 95.666c16.248 0 15.234-7.046 15.234-7.046l-.02-7.3H64.23v-2.19h19.44S96 80.644 96 64.248c0-16.396-9.074-15.812-9.074-15.812h-5.416v7.608s.292 9.074-8.93 9.074H56.45s-8.64-.14-8.64 8.35v14.038s.656 8.494 15.413 8.494zm8.55-3.636a2.785 2.785 0 0 1-2.79-2.79c0-1.542 1.248-2.79 2.79-2.79s2.79 1.248 2.79 2.79c0 1.542-1.248 2.79-2.79 2.79z"
+    fill="url(#python_b)"></path><defs
+    ><linearGradient id="python_a"
+      ><stop stop-color="#387EB8"></stop><stop offset="1" stop-color="#366994"
+      ></stop></linearGradient
+    ><linearGradient id="python_b"
+      ><stop stop-color="#FFE052"></stop><stop offset="1" stop-color="#FFC331"
+      ></stop></linearGradient
+    ></defs
+  ></svg
+>
