@@ -1,36 +1,66 @@
-<header>
-  <nav>
-    <a href="">Home</a>
-    <a href="">About</a>
-    <a href="">Projects</a>
-    <a href="">Contact</a>
+<div class="space-sticky"></div>
+
+<header class="nav-position">
+  <nav class="nav-glass-effect">
+    <div class="container">
+      <a href="">Home</a>
+      <a href="">About</a>
+      <a href="">Projects</a>
+      <a href="">Contact</a>
+    </div>
   </nav>
 </header>
 
 <style>
-  nav {
-    background-color: #252525;
-    padding: 16px 0;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    min-width: 550px;
-  }
-
   header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* flex-direction: column;
-    align-items: center; */
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transition: flex 0.2s ease-in;
   }
 
-  a {
+  nav .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 550px;
     font-weight: 500;
   }
 
+  .space-sticky {
+    height: 32px;
+  }
+  .nav-position {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+  }
+
+  .nav-glass-effect {
+    border: 1.5px solid rgba(255, 255, 255, 0.06);
+    background-color: rgba(37, 37, 37, 0.8);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 8px;
+    padding: 16px 0;
+  }
+
   a:is(:hover, :active) {
-    color: #f2f2f2;
+    color: #6bffd3;
   }
 </style>
+
+<script>
+  const header = document.getElementsByTagName("header")[0];
+  const nav = document.getElementsByTagName("nav")[0];
+
+  window.addEventListener("scroll", function () {
+    const headerStateStiky = header.getBoundingClientRect().top == 0;
+    nav.style.flex = headerStateStiky ? "1" : "0";
+    nav.style.borderRadius = headerStateStiky ? "0" : "8px";
+  });
+</script>
