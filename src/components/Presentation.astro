@@ -29,6 +29,7 @@ import Card from "./ui/Card.astro";
       <p slot="text">GitHub</p>
     </SocialPill>
 
+    <!-- TODO: Add copy paste email -->
     <SocialPill href="mailto:by.german@outlook.com" target={Target.Self}>
       <MailIcon slot="icon" width="22" height="22" color="white" />
       <p slot="text">by.german@outlook.com</p>
@@ -48,6 +49,7 @@ import Card from "./ui/Card.astro";
   .social {
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    flex-wrap: wrap;
+    gap: 0px 32px;
   }
 </style>
