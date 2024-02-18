@@ -1,0 +1,74 @@
+---
+import SkillContainer from "./SkillContainer.astro";
+
+import NextJsIcon from "../icons/NextJsIcon.astro";
+import ReactIcon from "../icons/ReactIcon.astro";
+import AngularIcon from "../icons/AngularIcon.astro";
+import VueIcon from "../icons/VueIcon.astro";
+import ExpressJsIcon from "../icons/ExpressJsIcon.astro";
+import NodeIcon from "../icons/NodeIcon.astro";
+import HTMLIcon from "../icons/HtmlIcon.astro";
+import CssIcon from "../icons/CssIcon.astro";
+import JavaScriptIcon from "../icons/JavaScriptIcon.astro";
+import TypeScriptIcon from "../icons/TypeScriptIcon.astro";
+import AndroidIcon from "../icons/AndroidIcon.astro";
+import FlutterIcon from "../icons/FlutterIcon.astro";
+import FlaskIcon from "../icons/FlaskIcon.astro";
+import PythonIcon from "../icons/PythonIcon.astro";
+import JavaIcon from "../icons/JavaIcon.astro";
+import CsharpIcon from "../icons/CsharpIcon.astro";
+import GitHubIcon from "../icons/GitHubIcon.astro";
+import DockerIcon from "../icons/DockerIcon.astro";
+import FirebaseIcon from "../icons/FirebaseIcon.astro";
+import AwsIcon from "../icons/AwsIcon.astro";
+import SpringIcon from "../icons/SpringIcon.astro";
+import GolangIcon from "../icons/GolangIcon.astro";
+
+const skillsFronted = [
+  { name: "NextJS", icon: NextJsIcon },
+  { name: "React", icon: ReactIcon },
+  { name: "Angular", icon: AngularIcon },
+  { name: "Vue", icon: VueIcon },
+  { name: "HTML", icon: HTMLIcon },
+  { name: "CSS", icon: CssIcon },
+  { name: "JavaScript", icon: JavaScriptIcon },
+  { name: "TypeScript", icon: TypeScriptIcon },
+  { name: "Flutter", icon: FlutterIcon },
+  { name: "Android", icon: AndroidIcon },
+];
+
+const skillsBackend = [
+  { name: "Java Spring", icon: SpringIcon },
+  { name: "Java", icon: JavaIcon },
+  { name: "C# .Net", icon: CsharpIcon },
+  { name: "Flask", icon: FlaskIcon },
+  { name: "Python", icon: PythonIcon },
+  { name: "Express", icon: ExpressJsIcon },
+  { name: "Node.js", icon: NodeIcon },
+  { name: "Go lang", icon: GolangIcon },
+];
+
+const tools = [
+  { name: "GitHub", icon: GitHubIcon },
+  { name: "Docker", icon: DockerIcon },
+  { name: "Firebase", icon: FirebaseIcon },
+  { name: "AWS", icon: AwsIcon },
+];
+---
+
+<section>
+  <h2>Skills</h2>
+
+  <SkillContainer title="Frontend" skills={skillsFronted} />
+  <SkillContainer title="Backend" skills={skillsBackend} />
+  <SkillContainer title="Tools" skills={tools} />
+</section>
+
+<style>
+  h2 {
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    color: #ff6b6b;
+  }
+</style>
