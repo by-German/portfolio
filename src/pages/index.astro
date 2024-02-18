@@ -4,6 +4,7 @@ import Presentation from "../components/Presentation.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
 import Footer from "../components/Footer.astro";
+import Skills from "../components/Skills.astro";
 ---
 
 <Layout title="bygerman - developer">
@@ -13,10 +14,9 @@ import Footer from "../components/Footer.astro";
 		</h1>
 
 		<Presentation />
-
 		<Experience />
-
 		<Projects />
+		<Skills />
 	</main>
 	
 	<Footer/>
@@ -30,8 +30,8 @@ import Footer from "../components/Footer.astro";
 	.header {
 		font-size: 3rem;
 		text-align: center;
-		margin-top: 4rem;
-		margin-bottom: 4rem;
+		margin-top: 8rem;
+		margin-bottom: 8rem;
 	}
 
 	.header span {
@@ -41,7 +41,4 @@ import Footer from "../components/Footer.astro";
 	code {
 		color: #6bffd3; /* #FF8B6B, #6B8BFF */
 	}
-
-	
-
 </style>
