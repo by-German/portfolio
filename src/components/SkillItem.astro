@@ -1,0 +1,26 @@
+---
+const { skill } = Astro.props;
+---
+
+<div class="skill-item">
+  <skill.icon width={40} height={40} />
+  {skill.name}
+</div>
+
+<style>
+  .skill-item {
+    border: 1px solid #505050;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: rgba(22, 22, 22, 0.4);
+    color: #959595;
+  }
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+    min-height: 90px;
+    justify-content: space-evenly;
+  }
+</style>
