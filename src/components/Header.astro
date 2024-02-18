@@ -52,6 +52,14 @@
   a:is(:hover, :active) {
     color: #6bffd3;
   }
+
+  /* Styles for screens smaller than 600px */
+  @media screen and (max-width: 599px) {
+    nav .container {
+      min-width: 330px;
+      font-size: 14px;
+    }
+  }
 </style>
 
 <script>
