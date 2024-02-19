@@ -2,20 +2,20 @@
 const { skill } = Astro.props;
 ---
 
-<div class="skill-item">
+<div class="skill-item-card skill-item-flex">
   <skill.icon width={40} height={40} />
   {skill.name}
 </div>
 
 <style>
-  .skill-item {
+  .skill-item-card {
     border: 1px solid #505050;
     padding: 8px 16px;
     border-radius: 8px;
     background-color: rgba(22, 22, 22, 0.4);
     color: #959595;
   }
-  .skill-item {
+  .skill-item-flex {
     display: flex;
     flex-direction: column;
     align-items: center;
