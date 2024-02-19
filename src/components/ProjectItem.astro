@@ -42,14 +42,54 @@ const { title, description, image, tags } = Astro.props;
 	article > section {
 		display: flex;
 		flex-direction: column;
+
+		margin-top: 16px;
+		margin-bottom: 16px;
+		margin-right: 16px;
 	}
+
+	article > section > h3 {
+		margin: 0;
+		color: #ababab;
+	}
+
 	article > section > p {
 		flex: 1;
+		text-wrap: pretty;
 	}
 	article footer {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 8px;
-		margin-bottom: 16px;
 	}
+
+	@media screen and (max-width: 600px){
+		article {
+			flex-direction: column;
+			max-width: 265px;
+		}
+
+		article > img {
+			border-top-left-radius: 8px;
+			border-top-right-radius: 8px;
+			border-bottom-left-radius: 0px;
+		}
+
+		article > section {
+			margin-top: 0;
+			margin-left: 16px;
+			margin-right: 16px;
+
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+	}
+
+	@media screen and (max-width: 468px){
+		article {
+			max-width: 100%;
+		}
+	}
+
 </style>
