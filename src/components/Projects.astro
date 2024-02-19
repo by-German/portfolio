@@ -16,6 +16,13 @@ const projects = [
 		image: "https://via.placeholder.com/200",
 		tags: ["Angular", "Firebase", "Spring Boot"],
 	},
+	{
+		title: "KNN With Golang",
+		description: "KNN algorithm implementation in Golang.",
+		image: "https://via.placeholder.com/200",
+		tags: ["Go", "Angular"],
+	},
+	// TOOD: Music App, Pomodoro App
 ];
 ---
 
@@ -35,6 +42,10 @@ const projects = [
 	</div>
 </section>
 
+<section>
+	<!-- TODO: Add other projects: Chrome extension (binding), sign detection (PDF), quoridor (PDF), CollabVR (PDF)-->
+</section>
+
 <style>
 	.sub-header {
 		font-size: 2rem;
@@ -46,5 +57,12 @@ const projects = [
 		display: flex;
 		gap: 16px;
 		flex-direction: column;
+	}
+	@media (max-width: 600px) {
+		.project-list {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 	}
 </style>
