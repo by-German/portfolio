@@ -6,7 +6,7 @@ const { title, skills } = Astro.props;
 
 <div class="skills-container">
   <h3>{title}</h3>
-  <ul>
+  <ul class="display-grid">
     {
       skills.map((skill: any) => (
         <li>
@@ -24,9 +24,9 @@ const { title, skills } = Astro.props;
     margin: 0;
   }
 
-  .skills-container > ul {
-    display: flex;
-    flex-wrap: wrap;
+  .display-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     gap: 16px;
   }
 
@@ -37,4 +37,11 @@ const { title, skills } = Astro.props;
     margin-bottom: 16px;
     margin-left: 16px;
   }
+
+  @media screen and (max-width: 415px) {
+    .display-grid {
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+  }
+
 </style>
