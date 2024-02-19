@@ -55,7 +55,9 @@ const { company, dateRange, description, tasks } = Astro.props;
     display: flex;
     flex-direction: column;
   }
-  section > header > h2, h3, ul {
+  section > header > h2,
+  h3,
+  ul {
     margin: 0px;
   }
   section > header > h2 {
@@ -76,5 +78,25 @@ const { company, dateRange, description, tasks } = Astro.props;
   }
   ul > li {
     text-wrap: pretty;
+  }
+
+  @media screen and (max-width: 599px) {
+    .time-line::before {
+      width: 18px;
+      height: 18px;
+      top: calc(18px / 2 - 1px);
+      left: calc(-18px / 2 - 2px);
+    }
+
+    section > header > h2 {
+      font-size: 1.2rem;
+    }
+    section > header > h3 {
+      font-size: 14px;
+    }
+    section > ul {
+      padding-left: 24px;
+      font-size: 14px;
+    }
   }
 </style>
