@@ -1,20 +1,27 @@
 ---
 import Chip from "./ui/Chip.astro";
+import LinkIcon from "../icons/LinkIcon.astro";
 
 interface Props {
 	title: string;
 	description: string;
 	image: string;
 	tags: string[];
+	href?: string;
 }
 
-const { title, description, image, tags } = Astro.props;
+const { title, description, image, tags, href } = Astro.props;
 ---
 
 <article>
 	<img src={image} alt={`Screenshot of the ${title} project`} />
 	<section>
-		<h3>{title}</h3>
+		<header>
+			<h3>{title}</h3>
+			<a href={href} target="_blank">
+				<LinkIcon />
+			</a>
+		</header>
 		<p>{description}</p>
 		<footer>
 			{tags.map((tag) => <Chip text={tag} />)}
@@ -51,7 +58,13 @@ const { title, description, image, tags } = Astro.props;
 		max-height: 100%;
 	}
 
-	article > section > h3 {
+	article > section header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	article > section h3 {
 		margin: 0;
 		color: #ababab;
 	}
