@@ -26,9 +26,11 @@ const experience = [
     ],
   },
 ];
+
+const { id } = Astro.props;
 ---
 
-<section>
+<section id={id}>
   <h2 class="sub-header">Experience</h2>
   {
     experience.map((item) => (

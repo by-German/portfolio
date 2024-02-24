@@ -52,9 +52,11 @@ const tools = [
   { name: "Firebase", icon: FirebaseIcon },
   { name: "AWS", icon: AwsIcon },
 ];
+
+const { id } = Astro.props;
 ---
 
-<section>
+<section id={id}>
   <h2>Skills</h2>
 
   <SkillContainer title="Frontend" skills={skillsFronted} />

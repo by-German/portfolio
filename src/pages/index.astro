@@ -9,17 +9,17 @@ import Skills from "../components/Skills.astro";
 
 <Layout title="bygerman - developer">
 	<main>
-		<h1 class="header">
+		<h1 id="about" class="header">
 			Elevating <span>Ideas</span> into <code>&lt;/code&gt;</code>
 		</h1>
 
 		<Presentation />
-		<Experience />
-		<Projects />
-		<Skills />
+		<Experience id="experience" />
+		<Projects id="projects" />
+		<Skills id="skills" />
 	</main>
-	
-	<Footer/>
+
+	<Footer />
 </Layout>
 
 <style>

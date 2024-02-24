@@ -20,9 +20,11 @@ const projects = [
 	},
 	// TOOD: Music App, Pomodoro App
 ];
+
+const { id } = Astro.props;
 ---
 
-<section>
+<section id={id}>
 	<h2 class="sub-header">Projects</h2>
 	<div class="project-list">
 		{
