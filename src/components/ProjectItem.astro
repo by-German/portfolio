@@ -42,8 +42,9 @@ const { title, description, image, tags, href } = Astro.props;
 	article > img {
 		border-top-left-radius: 8px;
 		border-bottom-left-radius: 8px;
-		object-fit: cover;
+		object-fit: fill;
 		object-position: center;
+		aspect-ratio: 16 / 9;
 		width: 45%;
 	}
 
