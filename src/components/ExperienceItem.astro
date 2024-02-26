@@ -1,6 +1,6 @@
 ---
 interface Props {
-  company: string;
+  company?: string;
   dateRange: string;
   description?: string;
   tasks: string[];
@@ -14,7 +14,7 @@ const { company, dateRange, description, tasks } = Astro.props;
 
   <section>
     <header>
-      <h3>{dateRange} - {company}</h3>
+      <h3>{dateRange} {company ? `: ${company}` : ''}</h3>
       <h2>{description}</h2>
     </header>
     <ul>
